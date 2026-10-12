@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReWire – Sell your old electronics</title>
+<meta name="description" content="List and sell used electrical and electronic items instead of throwing them away.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#">ReWire</a>
+  <nav>
+    <a href="#browse">Browse items</a>
+    <a href="#sell" class="btn small">Sell an item</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Your old electronics still have value.</h1>
+    <p>Phones, laptops, chargers, fans, wires and circuit boards. List what you no longer use, and let buyers, repairers and recyclers pick it up instead of it going to the bin.</p>
+    <a class="btn" href="#sell">List an item</a>
+    <a class="btn ghost" href="#browse">See what's for sale</a>
+  </div>
+  <svg class="trace" viewBox="0 0 240 240" aria-hidden="true">
+    <path d="M10 40 H90 L120 70 V150 L150 180 H230" />
+    <path d="M10 120 H60 L90 150 V200 H160" />
+    <path d="M230 40 H170 L140 10" />
+    <circle cx="10" cy="40" r="7"/><circle cx="230" cy="180" r="7"/>
+    <circle cx="10" cy="120" r="7"/><circle cx="160" cy="200" r="7"/>
+    <circle cx="140" cy="10" r="7"/><circle cx="230" cy="40" r="7"/>
+  </svg>
+</section>
+
+<main>
+  <section id="browse" class="block">
+    <h2>Items for sale</h2>
+    <div class="tools">
+      <input id="search" type="search" placeholder="Search items or location" aria-label="Search items">
+      <div id="chips" class="chips" role="group" aria-label="Filter by category"></div>
+    </div>
+    <div id="grid" class="grid"></div>
+    <p id="empty" class="empty" hidden>No items match. Try another category, or list your own below.</p>
+  </section>
+
+  <section id="sell" class="block form-block">
+    <div>
+      <h2>List an item</h2>
+      <p class="note">Describe it honestly: working, faulty, or only good for parts. Buyers contact you directly by WhatsApp.</p>
+    </div>
+    <form id="sellForm">
+      <label>Item name
+        <input name="title" required maxlength="60" placeholder="e.g. Dell Inspiron laptop, screen cracked">
+      </label>
+      <div class="row">
+        <label>Category
+          <select name="category" required></select>
+        </label>
+        <label>Condition
+          <select name="condition" required>
+            <option>Working</option>
+            <option>Needs repair</option>
+            <option>For parts only</option>
+          </select>
+        </label>
+      </div>
+      <div class="row">
+        <label>Price (₹)
+          <input name="price" type="number" min="0" required placeholder="500">
+        </label>
+        <label>Quantity
+          <input name="qty" type="number" min="1" value="1" required>
+        </label>
+      </div>
+      <div class="row">
+        <label>Your area
+          <input name="location" required placeholder="e.g. MVP Colony, Visakhapatnam">
+        </label>
+        <label>WhatsApp number
+          <input name="phone" type="tel" required pattern="[0-9]{10,13}" placeholder="919876543210" title="Digits only, with country code">
+        </label>
+      </div>
+      <button class="btn" type="submit">Publish listing</button>
+      <p id="msg" class="msg" role="status"></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>ReWire helps electronics get a second life. Please remove personal data from phones, laptops and storage before selling.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
