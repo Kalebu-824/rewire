@@ -1,36 +1,45 @@
-# ReWire – e-waste marketplace
+# Rewire – Web Application
 
-A simple static website where people list used electrical and electronic items for sale. No build step, no dependencies.
+## 📌 About the Project
+Rewire is a web-based project designed to provide a simple, user-friendly, and interactive website experience. It uses standard web technologies to create a structured interface with styling and JavaScript functionality.
 
-## Files
-- `index.html` – page structure
-- `style.css` – design (auto light/dark)
-- `script.js` – listings, search, category filter, sell form
-- Edit the `SEED` list and `CATEGORIES` at the top of `script.js` to change the listings and categories.
+## ✨ Features
+- Clean and user-friendly interface
+- Responsive web page styling
+- Interactive functionality using JavaScript
+- Structured content using HTML
+- Easy-to-understand and maintainable code
 
-## Push to GitHub and publish
+## 🛠️ Technologies Used
+- **HTML5** – Structure of the web pages
+- **CSS3** – Styling and layout
+- **JavaScript** – Interactive features
 
-1. Create an empty repository on github.com (for example `rewire`).
-2. In this folder, run:
-
-```bash
-git init
-git add .
-git commit -m "Initial e-waste marketplace site"
-git branch -M main
-git remote add origin https://github.com/<your-username>/rewire.git
-git push -u origin main
+## 📂 Project Structure
+```text
+rewire/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 ```
 
-3. On GitHub, open **Settings → Pages**, set Source to **Deploy from a branch**, choose `main` and `/ (root)`, then save.
-4. After a minute your site is live at `https://<your-username>.github.io/rewire/`.
+## 🚀 How to Run the Project
+1. Clone or download this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open `index.html` in your browser, or use the Live Server extension in VS Code.
 
-## Important limitation
+## 🎯 Project Objective
+The objective of this project is to build a web application using fundamental front-end development technologies while practicing website design, styling, and interactive functionality.
 
-GitHub Pages hosts only static files, so listings added through the form are saved in that visitor's own browser. Other visitors will not see them. Listings everyone should see go in the `SEED` array in `script.js`: add an entry, commit and push.
+## 🔮 Future Enhancements
+- Improve responsive design for different screen sizes
+- Add more interactive features
+- Enhance accessibility and user experience
+- Expand functionality based on user requirements
 
-To let all visitors see new listings, you need a shared database. Easy options: Firebase Firestore, Supabase, or a Google Form that writes to a Google Sheet. I can wire one of these in when you're ready.
+## 👩‍💻 Author
+**Kalebu-824**
 
-## Before you use it
-- Replace the placeholder WhatsApp number `919999999999` in the sample listings with real numbers (country code, digits only).
-- Remind sellers to wipe personal data from phones, laptops and storage.
+## 🔗 GitHub Repository
+[Rewire – GitHub](https://github.com/Kalebu-824/rewire)
